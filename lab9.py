@@ -6,8 +6,6 @@ for list_character in numbers_list:
     new_numbers_list.append(list_character)
 print(new_numbers_list)
 
-
-
 # 2
 surnames_list = []
 new_surname = input('Write pupils surname, input "stop" when you finish >>> ').capitalize()
