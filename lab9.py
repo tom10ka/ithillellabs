@@ -2,11 +2,9 @@
 numbers_list = [1, 1.4, 12, 121.2]
 new_numbers_list = []
 for list_character in numbers_list:
-    list_character = str(list_character*2)
+    list_character = str(list_character * 2)
     new_numbers_list.append(list_character)
 print(new_numbers_list)
-
-
 
 # 2
 surnames_list = []
