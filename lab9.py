@@ -7,7 +7,7 @@ for list_character in numbers_list:
 print(new_numbers_list)
 
 # 2
-new_surname = input('Write pupils surnames using space >>> ')
+new_surname = input('Write pupils surnames using space between >>> ')
 new_list = new_surname.split()
 new_list_2 = []
 for capital_letter in new_list:
