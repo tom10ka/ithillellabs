@@ -9,7 +9,7 @@ cities_visited_set = set(cities_visited_list)
 cities_wished_set = set(cities_wished_list)
 cities_liked_list = list(cities_wished_set & cities_visited_set)
 cities_liked_list_length = len(cities_liked_list)
-if cities_liked_list_length >= 0:
+if cities_liked_list_length > 0:
     cities_liked_string = ''
     for cities in cities_liked_list:
         if cities != cities_liked_list[-1]:
@@ -46,4 +46,5 @@ students = {
 students_number = len(students)
 students_1 = students['Женя Курич']
 students_1['Вік'] = 25
+print(f'Number of students is {students_number}')
 pprint(students)
