@@ -38,6 +38,7 @@ student = {
 # ваш код нижче
 student_names = student['Іван Петров'].keys()
 new_student_dict = dict.fromkeys(student_names)
+new_student_name = input('Write down your name and surname using space between >>> ')
 new_student_email = input('Write down your email >>> ')
 new_student_age = int(input('Write down your age >>> '))
 new_student_cellphone = input('Write down your cellphone number >>> ')
@@ -53,7 +54,7 @@ if 18 < new_student_age < 40:
     new_student_dict['Вік'] = new_student_age
     new_student_dict['Номер телефону'] = new_student_cellphone
     new_student_dict['Середній бал'] = new_student_points
-    student['Сергій Іванов'] = new_student_dict
+    student[new_student_name] = new_student_dict
 else:
     print('Entry age is between 18 and 40, so we cant add you, try again ')
 for students_name in student:
