@@ -43,11 +43,6 @@ for keys_list_character in keys_list:
 new_student_email = input('Write down your email >>> ')
 new_student_age = int(input('Write down your age >>> '))
 new_student_cellphone = input('Write down your cellphone number >>> ')
-if new_student_cellphone == '':
-    new_student_cellphone = '+3805612312'
-    print(f'We input your parent number {new_student_cellphone}')
-else:
-    pass
 new_student_points = float(input('Write down your average points >>> '))
 if new_student_points == int(new_student_points):
     new_student_points = int(new_student_points)
@@ -61,9 +56,16 @@ if 18 < new_student_age < 40:
     new_student['Номер телефону'] = new_student_cellphone
     new_student['Середній бал'] = new_student_points
     student['Сергій Іванов'] = new_student
-    pprint(student)
 else:
-    print('Entry age is between 18 and 40, sorry ')
+    print('Entry age is between 18 and 40, so we cant add you, try again ')
+for students_name in student:
+    cellphone_check = student[students_name]['Номер телефону']
+    if cellphone_check is None or cellphone_check == '':
+        parent_number = input(f'Please, write down parent number for {students_name} >>> ')
+        student[students_name]['Номер телефону'] = parent_number
+    else:
+        pass
+pprint(student)
 students_names = list(student.keys())
 number_of_students = len(student.keys())
 whole_points = 0
