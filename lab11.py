@@ -36,10 +36,8 @@ student = {
     },
 }
 # ваш код нижче
-keys_list = list(student['Іван Петров'].keys())
-new_student = {}
-for keys_list_character in keys_list:
-    new_student[keys_list_character] = None
+student_names = student['Іван Петров'].keys()
+new_student_dict = dict.fromkeys(student_names)
 new_student_email = input('Write down your email >>> ')
 new_student_age = int(input('Write down your age >>> '))
 new_student_cellphone = input('Write down your cellphone number >>> ')
@@ -51,11 +49,11 @@ elif type(new_student_points) == float:
 else:
     print('Wrong type of average points, try int or float type')
 if 18 < new_student_age < 40:
-    new_student['Пошта'] = new_student_email
-    new_student['Вік'] = new_student_age
-    new_student['Номер телефону'] = new_student_cellphone
-    new_student['Середній бал'] = new_student_points
-    student['Сергій Іванов'] = new_student
+    new_student_dict['Пошта'] = new_student_email
+    new_student_dict['Вік'] = new_student_age
+    new_student_dict['Номер телефону'] = new_student_cellphone
+    new_student_dict['Середній бал'] = new_student_points
+    student['Сергій Іванов'] = new_student_dict
 else:
     print('Entry age is between 18 and 40, so we cant add you, try again ')
 for students_name in student:
@@ -66,7 +64,6 @@ for students_name in student:
     else:
         pass
 pprint(student)
-students_names = list(student.keys())
 number_of_students = len(student.keys())
 whole_points = 0
 point = 0
