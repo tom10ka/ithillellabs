@@ -1,4 +1,3 @@
-#1
 def anecdote_number(number: str):
     if number == '1':
         anecdote = 'Мяч ще летів у вікно директора, а діти вже грали в хованки...'
@@ -16,7 +15,6 @@ chosen_anecdote = anecdote_number(number)
 print(chosen_anecdote)
 
 
-#2
 def rectangle_perimeter(length: float, width: float):
     perimeter = length * width
     return perimeter
@@ -28,7 +26,6 @@ your_perimeter = rectangle_perimeter(rectangle_length, rectangle_width)
 print(f'Perimeter of your rectangle is {your_perimeter}')
 
 
-#3
 def letter_deleter(user_string: str):
     clean_string = ''
     for letter in user_string:
@@ -42,7 +39,6 @@ result = letter_deleter(user_string)
 print(f'Your cleaned string is {result}')
 
 
-#4
 def letter_deleter(user_string: str, deleted_symbols: set):
     clean_string = ''
     for letter in user_string:
