@@ -1,13 +1,11 @@
-def anecdote_number(number: str):
-    if number == '1':
+def anecdote_number(number: int | float) -> str :
+    if number == 1:
         anecdote = 'Мяч ще летів у вікно директора, а діти вже грали в хованки...'
-        return anecdote
-    elif number == '2':
+    elif number == 2:
         anecdote = 'Все-таки є щось підозріле в назві газети "Рибак рибака"...'
-        return anecdote
     else:
         anecdote = 'Вночі прийшов кіт і скромно ліг у мене в ногах. А під ранок в ногах у кота спав вже я.'
-        return anecdote
+    return anecdote
 
 
 number = input('Write down number >>> ')
@@ -15,7 +13,7 @@ chosen_anecdote = anecdote_number(number)
 print(chosen_anecdote)
 
 
-def rectangle_perimeter(length: float, width: float):
+def rectangle_perimeter(length: float | int, width: float | int) -> float | int:
     perimeter = length * width
     return perimeter
 
@@ -26,7 +24,7 @@ your_perimeter = rectangle_perimeter(rectangle_length, rectangle_width)
 print(f'Perimeter of your rectangle is {your_perimeter}')
 
 
-def letter_deleter(user_string: str):
+def letter_deleter(user_string: str) -> str:
     clean_string = ''
     for letter in user_string:
         if letter.lower() != 'ї' and letter.lower() != 'ж':
@@ -39,7 +37,7 @@ result = letter_deleter(user_string)
 print(f'Your cleaned string is {result}')
 
 
-def letter_deleter(user_string: str, deleted_symbols: set):
+def letter_deleter(user_string: str, deleted_symbols: set) -> str:
     clean_string = ''
     for letter in user_string:
         if letter.lower() in deleted_symbols:
