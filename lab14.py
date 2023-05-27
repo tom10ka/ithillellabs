@@ -8,7 +8,7 @@ def anecdote_number(number: int | float) -> str :
     return anecdote
 
 
-number = input('Write down number >>> ')
+number = float(input('Write down number >>> '))
 chosen_anecdote = anecdote_number(number)
 print(chosen_anecdote)
 
