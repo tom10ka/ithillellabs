@@ -2,14 +2,11 @@ from typing import Any
 
 
 def kilometers_in_miles(value: int | float) -> int | float:
-    try:
-        if value >= 0:
-            reverse = value * 0.6217
-            return reverse
-        else:
-            raise ValueError
-    except TypeError:
-        return 0
+    if value >= 0:
+        reverse = value * 0.6217
+        return reverse
+    else:
+        raise ValueError
 
 
 def convert_in_tuple(value: Any) -> tuple:
@@ -39,7 +36,6 @@ def convert_in_tuple(value: Any) -> tuple:
         return value_tuple
     else:
         return tuple()
-
 
 
 valval = 'abc'

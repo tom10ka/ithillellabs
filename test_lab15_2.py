@@ -2,13 +2,14 @@ import lab15
 
 import pytest
 
+
 def test_convert_in_tuple_str():
     test_value = 'acb'
     assert lab15.convert_in_tuple(test_value) == ('a', 'b', 'c')
 
 
 def test_convert_in_tuple_list():
-    test_value = ['a','c','b']
+    test_value = ['a', 'c', 'b']
     assert lab15.convert_in_tuple(test_value) == ('a', 'b', 'c')
 
 
@@ -24,6 +25,7 @@ def test_convert_in_tuple_dict():
         'b': 3,
     }
     assert lab15.convert_in_tuple(test_value) == ('a', 'b', 'c')
+
 
 def test_convert_in_tuple_int():
     test_value = 1
