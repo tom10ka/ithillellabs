@@ -16,8 +16,3 @@ def month_calendar():
     for month in month_list:
         month_list.append(month)
         yield month
-
-
-
-
-
