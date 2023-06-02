@@ -16,5 +16,3 @@ def month_calendar():
     while True:
         for month in month_list:
             yield month
-
-
