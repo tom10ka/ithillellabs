@@ -16,4 +16,4 @@ def month_calendar():
         ]
         for month in month_list:
             yield month
-            continue
+            
