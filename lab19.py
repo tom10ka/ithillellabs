@@ -1,6 +1,6 @@
 import csv
 
-with open(file='111.csv', mode='r', encoding='utf-8') as file:
+with open(file='homework_file.csv', mode='r', encoding='utf-8') as file:
     reader = csv.DictReader(file, delimiter=';')
     names_list = []
     for row in list(reader):
