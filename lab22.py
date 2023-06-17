@@ -14,12 +14,12 @@ class Transport(ABC):
         pass
 
     def fuel_recharge(self, recharge_volume):
-        refuel = self.fuel_residue + recharge_volume
-        if refuel > self.volume:
-            unused_fuel = refuel - self.volume
-            return f'Fuel tank is full, unused fuel is {unused_fuel} litres'
+        self.fuel_residue += recharge_volume
+        if self.fuel_residue > self.volume:
+            self.fuel_residue = self.volume
+            return self.fuel_residue
         else:
-            return f'Fuel tank is recharged, now its {refuel} litres in tank'
+            return self.fuel_residue
 
     def fuel_transfusion(self, other, transfusion_number):
         transfused_volume = self.volume - self.fuel_residue
@@ -27,12 +27,9 @@ class Transport(ABC):
         if tranfusing_volume >= transfusion_number <= transfused_volume:
             other.fuel_residue -= transfusion_number
             self.fuel_residue += transfusion_number
-            return f'Transfusing already done, residue in transfuser is {other.fuel_residue}, in transfused is ' \
-                   f'{self.fuel_residue}'
-        elif transfusion_number > tranfusing_volume:
-            return f'Number of transfused fuel is more than transfuser transport has'
+            return self.fuel_residue
         else:
-            return f'Number of transfused fuel is more than transfused transport has'
+            raise ValueError
 
 
 class Auto(Transport):
@@ -53,3 +50,6 @@ class Motorbike(Transport):
 
     def __str__(self):
         return f'Motorbike, brand is {self.brand}'
+
+
+
